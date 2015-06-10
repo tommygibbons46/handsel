@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let instance = Venmo.sharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +26,72 @@ class ViewController: UIViewController {
     {
         if !Venmo.isVenmoAppInstalled()
         {
+            Venmo.sharedInstance().defaultTransactionMethod = VENTransactionMethod.API
             println("no app installed")
         }
         else
         {
+            Venmo.sharedInstance().defaultTransactionMethod = VENTransactionMethod.AppSwitch
             println("we have the app")
         }
+//        let profPermission = VENPermissionAccessProfile
+//        let paymentPermission = VENPermissionMakePayments
+        Venmo.sharedInstance().requestPermissions(["access_friends", "access_email", "make_payments", "access_balance"], withCompletionHandler: { (success, error) -> Void in
+            if success
+            {
+                println("we have a success")
+            }
+            else
+            {
+                 println("no success")
+            }
+        })
+ 
+//        Venmo.sharedInstance().requestPermissions([VENPermissionAccessProfile], withCompletionHandler: { (success, error) -> Void in
+//            if success
+//            {
+//                println("we have a success")
+//            }
+//            else
+//            {
+//                println("no success")
+//            }
+//        })
+
         
-//        if (![Venmo isVenmoAppInstalled]) {
-//            [[Venmo sharedInstance] setDefaultTransactionMethod:VENTransactionMethodAPI];
+    }
+    
+    @IBAction func paymentTap(sender: AnyObject)
+    {
+//        let payAmount : Float = .5 as Float
+        Venmo.sharedInstance().sendRequestTo("Sean.emmer@gmail.com", amount: 1, note: "coming back atcha") { (transaction, success, error) -> Void in
+            if success
+            {
+                println("we have a success")
+                println("here is our \(transaction)")
+            }
+        }
+//        Venmo.sharedInstance().sendPaymentTo("Sean.emmer@gmail.com", amount: 1, note: "what up mang") { (transaction, success, error) -> Void in
+//            if success
+//            {
+//                println("we have a success")
+//                println("here is our \(transaction)")
+//               
+//            }
 //        }
-//        else {
-//            [[Venmo sharedInstance] setDefaultTransactionMethod:VENTransactionMethodAppSwitch];
+//        instance.sendPaymentTo("9739439239", amount: 0 , note: "testeroo", audience: , completionHandler: { (transaction, success, error) -> Void in
+//        if success
+//        {
+//            println("we have a success")
+//            println(transaction)
+//            
 //        }
+//        })
+    }
+    
+    @IBAction func inquireAboutBalance(sender: AnyObject)
+    {
+//        Venmo.sharedInstance().
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
