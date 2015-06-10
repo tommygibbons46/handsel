@@ -126,6 +126,12 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
 
         
     }
+    
+    @IBAction func payPalPay(sender: AnyObject)
+    {
+        
+    }
+    
 
 }
 

@@ -45,10 +45,21 @@
                                     <action selector="inquireAboutBalance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12q-eD-AgW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA6-UH-VDj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Pay with payPal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="payPalPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOa-lS-cod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Y8-fI-IUQ" firstAttribute="top" secondItem="ywr-ne-8oq" secondAttribute="bottom" constant="70" id="AZz-dg-Osz"/>
+                            <constraint firstAttribute="centerX" secondItem="mA6-UH-VDj" secondAttribute="centerX" id="AgJ-iQ-lYt"/>
+                            <constraint firstItem="8Y8-fI-IUQ" firstAttribute="top" secondItem="mA6-UH-VDj" secondAttribute="bottom" constant="22" id="BMv-hU-eeW"/>
                             <constraint firstItem="Ohw-z7-X2u" firstAttribute="top" secondItem="8Y8-fI-IUQ" secondAttribute="bottom" constant="49" id="GZJ-11-uHi"/>
                             <constraint firstAttribute="centerX" secondItem="ywr-ne-8oq" secondAttribute="centerX" id="WeB-lr-QeR"/>
                             <constraint firstAttribute="centerY" secondItem="8Y8-fI-IUQ" secondAttribute="centerY" id="kmi-hO-B3O"/>
@@ -60,10 +71,13 @@
                                 <exclude reference="8Y8-fI-IUQ"/>
                                 <exclude reference="Ohw-z7-X2u"/>
                                 <exclude reference="ywr-ne-8oq"/>
+                                <exclude reference="mA6-UH-VDj"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="WeB-lr-QeR"/>
+                                <exclude reference="AgJ-iQ-lYt"/>
                                 <exclude reference="AZz-dg-Osz"/>
+                                <exclude reference="BMv-hU-eeW"/>
                                 <exclude reference="kmi-hO-B3O"/>
                                 <exclude reference="pbr-SA-2dT"/>
                                 <exclude reference="GZJ-11-uHi"/>
@@ -75,10 +89,13 @@
                                 <include reference="8Y8-fI-IUQ"/>
                                 <include reference="Ohw-z7-X2u"/>
                                 <include reference="ywr-ne-8oq"/>
+                                <include reference="mA6-UH-VDj"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="WeB-lr-QeR"/>
+                                <include reference="AgJ-iQ-lYt"/>
                                 <include reference="AZz-dg-Osz"/>
+                                <include reference="BMv-hU-eeW"/>
                                 <include reference="kmi-hO-B3O"/>
                                 <include reference="pbr-SA-2dT"/>
                                 <include reference="GZJ-11-uHi"/>
