@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2061" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-fI-IUQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Give Venmo Auth">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveVenmoAuthTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STr-bE-3LB"/>
+                                    <segue destination="2cu-SQ-VJV" kind="presentation" id="rEO-5h-LgM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="8Y8-fI-IUQ" secondAttribute="centerY" id="kmi-hO-B3O"/>
+                            <constraint firstAttribute="centerX" secondItem="8Y8-fI-IUQ" secondAttribute="centerX" id="pbr-SA-2dT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8Y8-fI-IUQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="kmi-hO-B3O"/>
+                                <exclude reference="pbr-SA-2dT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8Y8-fI-IUQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="kmi-hO-B3O"/>
+                                <include reference="pbr-SA-2dT"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ub0-td-sml">
+            <objects>
+                <viewController id="2cu-SQ-VJV" customClass="WebViewController" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8OW-e4-rZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="zO0-ER-wiG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbs-aR-vf1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-ab-4yH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zO0-ER-wiG" firstAttribute="top" secondItem="hLs-ab-4yH" secondAttribute="bottom" id="4ov-57-lRc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hLs-ab-4yH" secondAttribute="trailing" constant="-16" id="QUL-zu-Cg4"/>
+                            <constraint firstItem="hLs-ab-4yH" firstAttribute="top" secondItem="tbs-aR-vf1" secondAttribute="topMargin" id="cdI-Um-IxG"/>
+                            <constraint firstItem="hLs-ab-4yH" firstAttribute="leading" secondItem="tbs-aR-vf1" secondAttribute="leadingMargin" constant="-16" id="eEA-7z-Xjb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hLs-ab-4yH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QUL-zu-Cg4"/>
+                                <exclude reference="cdI-Um-IxG"/>
+                                <exclude reference="eEA-7z-Xjb"/>
+                                <exclude reference="4ov-57-lRc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hLs-ab-4yH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QUL-zu-Cg4"/>
+                                <include reference="cdI-Um-IxG"/>
+                                <include reference="eEA-7z-Xjb"/>
+                                <include reference="4ov-57-lRc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="hLs-ab-4yH" id="c98-9Z-ucD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWh-c2-seT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="252"/>
         </scene>
     </scenes>
 </document>

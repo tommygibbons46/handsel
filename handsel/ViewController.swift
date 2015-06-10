@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func giveVenmoAuthTap(sender: AnyObject)
+    {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("segue time")
+        
+        let nextVC = segue.destinationViewController as! WebViewController
+
+        
+    }
 
 }
 
