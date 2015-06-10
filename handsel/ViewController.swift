@@ -8,18 +8,70 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     
-    let instance = Venmo.sharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func setUpApplePay()
+    {
+        let request = Stripe.paymentRequestWithMerchantIdentifier("merchant.handsel")
+        let label = "test dummy"
+        let amount = NSDecimalNumber(string: "1.00")
+        request?.paymentSummaryItems = [PKPaymentSummaryItem(label: label, amount: amount)]
+        if Stripe.canSubmitPaymentRequest(request)
+        {
+            var paymentVC : STPTestPaymentAuthorizationViewController?
+
+            paymentVC = STPTestPaymentAuthorizationViewController(paymentRequest: request)
+            
+            paymentVC?.delegate = self
+            
+            presentViewController(paymentVC!, animated: true, completion: nil)
+            
+//            paymentVC = PKPaymentAuthorizationViewController(paymentRequest: request)
+            
+
+
+        }
+        
+    }
+    
+    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!)
+    {
+        STPAPIClient.sharedClient().createTokenWithPayment(payment, completion: { (token, error) -> Void in
+            if error == nil
+            {
+                completion(PKPaymentAuthorizationStatus.Success)
+                println("paid the bitch")
+            }
+            else
+            {
+                completion(PKPaymentAuthorizationStatus.Failure)
+            }
+        })
+
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    func setUpApplePayStubs()
+    {
+        let requestTwo = Stripe.paymentRequestWithMerchantIdentifier("merchant.handsel")
+        let label = "test mummy"
+        let amount = NSDecimalNumber(string: "1.00")
+        
+        
     }
 
     @IBAction func giveVenmoAuthTap(sender: AnyObject)
@@ -34,8 +86,6 @@ class ViewController: UIViewController {
             Venmo.sharedInstance().defaultTransactionMethod = VENTransactionMethod.AppSwitch
             println("we have the app")
         }
-//        let profPermission = VENPermissionAccessProfile
-//        let paymentPermission = VENPermissionMakePayments
         Venmo.sharedInstance().requestPermissions(["access_friends", "access_email", "make_payments", "access_balance"], withCompletionHandler: { (success, error) -> Void in
             if success
             {
@@ -46,17 +96,7 @@ class ViewController: UIViewController {
                  println("no success")
             }
         })
- 
-//        Venmo.sharedInstance().requestPermissions([VENPermissionAccessProfile], withCompletionHandler: { (success, error) -> Void in
-//            if success
-//            {
-//                println("we have a success")
-//            }
-//            else
-//            {
-//                println("no success")
-//            }
-//        })
+
 
         
     }
@@ -71,27 +111,12 @@ class ViewController: UIViewController {
                 println("here is our \(transaction)")
             }
         }
-//        Venmo.sharedInstance().sendPaymentTo("Sean.emmer@gmail.com", amount: 1, note: "what up mang") { (transaction, success, error) -> Void in
-//            if success
-//            {
-//                println("we have a success")
-//                println("here is our \(transaction)")
-//               
-//            }
-//        }
-//        instance.sendPaymentTo("9739439239", amount: 0 , note: "testeroo", audience: , completionHandler: { (transaction, success, error) -> Void in
-//        if success
-//        {
-//            println("we have a success")
-//            println(transaction)
-//            
-//        }
-//        })
+
     }
     
     @IBAction func inquireAboutBalance(sender: AnyObject)
     {
-//        Venmo.sharedInstance().
+        setUpApplePay()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

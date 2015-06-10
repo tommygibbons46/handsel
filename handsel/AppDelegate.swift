@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         NSURLProtocol.registerClass(URLProtocol)
         Venmo.startWithAppId("2676", secret: "XJmwsXTFmDpt84XvCA29VN5NWFEHEQV9", name: "handsel")
+        Stripe.setDefaultPublishableKey("pk_live_O8m0QhZ05kmDEDhEt5Ge6Hmg")
         // Override point for customization after application launch.
         return true
     }
