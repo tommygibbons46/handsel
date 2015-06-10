@@ -1,0 +1,3 @@
+[submodule "dwolla-ios"]
+	path = dwolla-ios
+	url = https://github.com/Dwolla/dwolla-ios.git
