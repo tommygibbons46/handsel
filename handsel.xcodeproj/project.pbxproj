@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		538EF12743D255CF71AA3260 /* libPods-handsel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DBC4898E82C993F0CA209 /* libPods-handsel.a */; };
-		96A70BF41B27FFD600783956 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A70BF31B27FFD600783956 /* test.m */; };
 		96D64DD01B27B2D00051A663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DCF1B27B2D00051A663 /* AppDelegate.swift */; };
 		96D64DD31B27B2D00051A663 /* handsel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DD11B27B2D00051A663 /* handsel.xcdatamodeld */; };
 		96D64DD51B27B2D00051A663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DD41B27B2D00051A663 /* ViewController.swift */; };
@@ -34,8 +33,6 @@
 		0A211FC1BD2ABB57CFA0A525 /* Pods-handsel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handsel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-handsel/Pods-handsel.debug.xcconfig"; sourceTree = "<group>"; };
 		6490E97B99D284E92673CE1B /* Pods-handsel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handsel.release.xcconfig"; path = "Pods/Target Support Files/Pods-handsel/Pods-handsel.release.xcconfig"; sourceTree = "<group>"; };
 		96A70BF11B27FFD600783956 /* handsel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "handsel-Bridging-Header.h"; sourceTree = "<group>"; };
-		96A70BF21B27FFD600783956 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		96A70BF31B27FFD600783956 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		96D64DCA1B27B2D00051A663 /* handsel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handsel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D64DCE1B27B2D00051A663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D64DCF1B27B2D00051A663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 		96D64DC11B27B2D00051A663 = {
 			isa = PBXGroup;
 			children = (
-				96A70BF21B27FFD600783956 /* test.h */,
-				96A70BF31B27FFD600783956 /* test.m */,
 				96D64DCC1B27B2D00051A663 /* handsel */,
 				96D64DE51B27B2D00051A663 /* handselTests */,
 				96D64DCB1B27B2D00051A663 /* Products */,
@@ -292,7 +287,6 @@
 				96D64DF51B27CDCB0051A663 /* URLProtocol.swift in Sources */,
 				96D64DD31B27B2D00051A663 /* handsel.xcdatamodeld in Sources */,
 				96D64DF31B27B4D50051A663 /* WebViewController.swift in Sources */,
-				96A70BF41B27FFD600783956 /* test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

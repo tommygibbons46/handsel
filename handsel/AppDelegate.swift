@@ -18,8 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
         NSURLProtocol.registerClass(URLProtocol)
+        Venmo.startWithAppId("2676", secret: "XJmwsXTFmDpt84XvCA29VN5NWFEHEQV9", name: "handsel")
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        if Venmo.sharedInstance().handleOpenURL(url)
+        {
+            return true
+        }
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {
