@@ -22,7 +22,21 @@ class ViewController: UIViewController {
 
     @IBAction func giveVenmoAuthTap(sender: AnyObject)
     {
+        if !Venmo.isVenmoAppInstalled()
+        {
+            println("no app installed")
+        }
+        else
+        {
+            println("we have the app")
+        }
         
+//        if (![Venmo isVenmoAppInstalled]) {
+//            [[Venmo sharedInstance] setDefaultTransactionMethod:VENTransactionMethodAPI];
+//        }
+//        else {
+//            [[Venmo sharedInstance] setDefaultTransactionMethod:VENTransactionMethodAppSwitch];
+//        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2061" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,8 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="giveVenmoAuthTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STr-bE-3LB"/>
-                                    <segue destination="2cu-SQ-VJV" kind="presentation" id="rEO-5h-LgM"/>
+                                    <action selector="giveVenmoAuthTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWS-lC-3ka"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,6 +65,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zO0-ER-wiG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tbs-aR-vf1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-ab-4yH">
@@ -84,10 +85,10 @@
                                 <exclude reference="hLs-ab-4yH"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4ov-57-lRc"/>
                                 <exclude reference="QUL-zu-Cg4"/>
                                 <exclude reference="cdI-Um-IxG"/>
                                 <exclude reference="eEA-7z-Xjb"/>
-                                <exclude reference="4ov-57-lRc"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,10 +96,10 @@
                                 <include reference="hLs-ab-4yH"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4ov-57-lRc"/>
                                 <include reference="QUL-zu-Cg4"/>
                                 <include reference="cdI-Um-IxG"/>
                                 <include reference="eEA-7z-Xjb"/>
-                                <include reference="4ov-57-lRc"/>
                             </mask>
                         </variation>
                     </view>
