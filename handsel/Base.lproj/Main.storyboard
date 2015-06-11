@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2061" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -50,8 +48,72 @@
                                 <state key="normal" title="Pay with payPal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AO6-FK-AmB">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="46a-Az-yj1"/>
+                                    <constraint firstAttribute="height" constant="30" id="k7Y-3c-xuc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="46a-Az-yj1"/>
+                                        <exclude reference="k7Y-3c-xuc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="46a-Az-yj1"/>
+                                        <include reference="k7Y-3c-xuc"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number/ email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SA-eH-Wui">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="XN4-LV-TjY"/>
+                                    <constraint firstAttribute="height" constant="30" id="nmo-bp-n7d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XN4-LV-TjY"/>
+                                        <exclude reference="nmo-bp-n7d"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XN4-LV-TjY"/>
+                                        <include reference="nmo-bp-n7d"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfX-fn-3fP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JnD-rB-8Qu"/>
+                                    <constraint firstAttribute="width" constant="84" id="dOX-27-aMY"/>
+                                </constraints>
+                                <state key="normal" title="to paypal vc">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JnD-rB-8Qu"/>
+                                        <exclude reference="dOX-27-aMY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JnD-rB-8Qu"/>
+                                        <include reference="dOX-27-aMY"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="payPalPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOa-lS-cod"/>
+                                    <segue destination="bd4-6d-r0K" kind="show" id="J5V-TM-FhK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,8 +123,14 @@
                             <constraint firstAttribute="centerX" secondItem="mA6-UH-VDj" secondAttribute="centerX" id="AgJ-iQ-lYt"/>
                             <constraint firstItem="8Y8-fI-IUQ" firstAttribute="top" secondItem="mA6-UH-VDj" secondAttribute="bottom" constant="22" id="BMv-hU-eeW"/>
                             <constraint firstItem="Ohw-z7-X2u" firstAttribute="top" secondItem="8Y8-fI-IUQ" secondAttribute="bottom" constant="49" id="GZJ-11-uHi"/>
+                            <constraint firstItem="8SA-eH-Wui" firstAttribute="top" secondItem="AO6-FK-AmB" secondAttribute="bottom" constant="19" id="N6X-ZC-j6T"/>
+                            <constraint firstAttribute="centerX" secondItem="8SA-eH-Wui" secondAttribute="centerX" id="TqX-Pp-wYZ"/>
                             <constraint firstAttribute="centerX" secondItem="ywr-ne-8oq" secondAttribute="centerX" id="WeB-lr-QeR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rfX-fn-3fP" secondAttribute="bottom" constant="55" id="Xxb-5Q-OSI"/>
+                            <constraint firstAttribute="centerX" secondItem="AO6-FK-AmB" secondAttribute="centerX" id="agU-b1-6vb"/>
+                            <constraint firstItem="AO6-FK-AmB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="j2J-31-hbf"/>
                             <constraint firstAttribute="centerY" secondItem="8Y8-fI-IUQ" secondAttribute="centerY" id="kmi-hO-B3O"/>
+                            <constraint firstAttribute="centerX" secondItem="rfX-fn-3fP" secondAttribute="centerX" id="mFu-af-k4B"/>
                             <constraint firstAttribute="centerX" secondItem="8Y8-fI-IUQ" secondAttribute="centerX" id="pbr-SA-2dT"/>
                             <constraint firstAttribute="centerX" secondItem="Ohw-z7-X2u" secondAttribute="centerX" id="xyL-cl-Mvc"/>
                         </constraints>
@@ -72,8 +140,15 @@
                                 <exclude reference="Ohw-z7-X2u"/>
                                 <exclude reference="ywr-ne-8oq"/>
                                 <exclude reference="mA6-UH-VDj"/>
+                                <exclude reference="AO6-FK-AmB"/>
+                                <exclude reference="8SA-eH-Wui"/>
+                                <exclude reference="rfX-fn-3fP"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="agU-b1-6vb"/>
+                                <exclude reference="j2J-31-hbf"/>
+                                <exclude reference="N6X-ZC-j6T"/>
+                                <exclude reference="TqX-Pp-wYZ"/>
                                 <exclude reference="WeB-lr-QeR"/>
                                 <exclude reference="AgJ-iQ-lYt"/>
                                 <exclude reference="AZz-dg-Osz"/>
@@ -82,6 +157,8 @@
                                 <exclude reference="pbr-SA-2dT"/>
                                 <exclude reference="GZJ-11-uHi"/>
                                 <exclude reference="xyL-cl-Mvc"/>
+                                <exclude reference="mFu-af-k4B"/>
+                                <exclude reference="Xxb-5Q-OSI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -90,8 +167,15 @@
                                 <include reference="Ohw-z7-X2u"/>
                                 <include reference="ywr-ne-8oq"/>
                                 <include reference="mA6-UH-VDj"/>
+                                <include reference="AO6-FK-AmB"/>
+                                <include reference="8SA-eH-Wui"/>
+                                <include reference="rfX-fn-3fP"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="agU-b1-6vb"/>
+                                <include reference="j2J-31-hbf"/>
+                                <include reference="N6X-ZC-j6T"/>
+                                <include reference="TqX-Pp-wYZ"/>
                                 <include reference="WeB-lr-QeR"/>
                                 <include reference="AgJ-iQ-lYt"/>
                                 <include reference="AZz-dg-Osz"/>
@@ -100,67 +184,35 @@
                                 <include reference="pbr-SA-2dT"/>
                                 <include reference="GZJ-11-uHi"/>
                                 <include reference="xyL-cl-Mvc"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="ub0-td-sml">
-            <objects>
-                <viewController id="2cu-SQ-VJV" customClass="WebViewController" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8OW-e4-rZM"/>
-                        <viewControllerLayoutGuide type="bottom" id="zO0-ER-wiG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tbs-aR-vf1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-ab-4yH">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zO0-ER-wiG" firstAttribute="top" secondItem="hLs-ab-4yH" secondAttribute="bottom" id="4ov-57-lRc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hLs-ab-4yH" secondAttribute="trailing" constant="-16" id="QUL-zu-Cg4"/>
-                            <constraint firstItem="hLs-ab-4yH" firstAttribute="top" secondItem="tbs-aR-vf1" secondAttribute="topMargin" id="cdI-Um-IxG"/>
-                            <constraint firstItem="hLs-ab-4yH" firstAttribute="leading" secondItem="tbs-aR-vf1" secondAttribute="leadingMargin" constant="-16" id="eEA-7z-Xjb"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="hLs-ab-4yH"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="4ov-57-lRc"/>
-                                <exclude reference="QUL-zu-Cg4"/>
-                                <exclude reference="cdI-Um-IxG"/>
-                                <exclude reference="eEA-7z-Xjb"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="hLs-ab-4yH"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="4ov-57-lRc"/>
-                                <include reference="QUL-zu-Cg4"/>
-                                <include reference="cdI-Um-IxG"/>
-                                <include reference="eEA-7z-Xjb"/>
+                                <include reference="mFu-af-k4B"/>
+                                <include reference="Xxb-5Q-OSI"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="hLs-ab-4yH" id="c98-9Z-ucD"/>
+                        <outlet property="amountField" destination="AO6-FK-AmB" id="STn-Rn-46T"/>
+                        <outlet property="recipientField" destination="8SA-eH-Wui" id="Ter-dI-4Vw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xWh-c2-seT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="238"/>
+        </scene>
+        <!--Pay Pal PaymentVC-->
+        <scene sceneID="cui-sD-j2a">
+            <objects>
+                <viewController id="bd4-6d-r0K" customClass="PayPalPaymentVC" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ay9-6q-CNj"/>
+                        <viewControllerLayoutGuide type="bottom" id="APs-bl-Ezq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ynA-KD-MKr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kh6-ej-gQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.5" y="845"/>
         </scene>
     </scenes>
 </document>
