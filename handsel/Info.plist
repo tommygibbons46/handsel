@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>Tommy-Gibbons.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.handsel</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -28,6 +28,16 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>venmo2676</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.handsel</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.handsel</string>
 			</array>
 		</dict>
 	</array>

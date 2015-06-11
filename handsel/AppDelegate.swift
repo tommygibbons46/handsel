@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSURLProtocol.registerClass(URLProtocol)
         Venmo.startWithAppId("2676", secret: "XJmwsXTFmDpt84XvCA29VN5NWFEHEQV9", name: "handsel")
         Stripe.setDefaultPublishableKey("pk_live_O8m0QhZ05kmDEDhEt5Ge6Hmg")
-        let ppMobile = PayPalMobile()
-        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction: "AWww0Bf7TqfHyM_Dsr9EfteI08LsvULXg8Fh032TAis8Bibge6ptn6uqPfbz5wA8yt39mo_aUPLw_wnQ", PayPalEnvironmentSandbox: "AREVgdbDq3KRlS1iaNr6c1PHdAh4QL0CbESe6sEhm1EUzCE6Om7BO9S0dKlkr2_XPXGETfQ4Tl0QPloW"])
-            
+//        let ppMobile = PayPalMobile()
+//        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction: "AWww0Bf7TqfHyM_Dsr9EfteI08LsvULXg8Fh032TAis8Bibge6ptn6uqPfbz5wA8yt39mo_aUPLw_wnQ", PayPalEnvironmentSandbox: "AREVgdbDq3KRlS1iaNr6c1PHdAh4QL0CbESe6sEhm1EUzCE6Om7BO9S0dKlkr2_XPXGETfQ4Tl0QPloW"])
+        Braintree.setReturnURLScheme("com.handsel")
         // Override point for customization after application launch.
         return true
     }
@@ -32,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             return true
         }
-        return false
+//        return false changing for braintree
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

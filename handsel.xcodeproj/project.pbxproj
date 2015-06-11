@@ -10,6 +10,7 @@
 		538EF12743D255CF71AA3260 /* libPods-handsel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DBC4898E82C993F0CA209 /* libPods-handsel.a */; };
 		965A9CB51B2961CA0099BAD2 /* PayPalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A9CB41B2961CA0099BAD2 /* PayPalVC.swift */; };
 		965A9CB71B2967010099BAD2 /* PayPalPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A9CB61B2967010099BAD2 /* PayPalPaymentVC.swift */; };
+		965A9CBA1B297CFD0099BAD2 /* BrainTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A9CB91B297CFD0099BAD2 /* BrainTreeVC.swift */; };
 		96D64DD01B27B2D00051A663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DCF1B27B2D00051A663 /* AppDelegate.swift */; };
 		96D64DD31B27B2D00051A663 /* handsel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DD11B27B2D00051A663 /* handsel.xcdatamodeld */; };
 		96D64DD51B27B2D00051A663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64DD41B27B2D00051A663 /* ViewController.swift */; };
@@ -22,27 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		96A70CBD1B28EDD900783956 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F534DB9A157EB04E000E2BF8;
-			remoteInfo = DwollaOAuth;
-		};
-		96A70CBF1B28EDD900783956 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EDBE3DA16811A71007FD655;
-			remoteInfo = Test;
-		};
-		96A70CC11B28EDD900783956 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 889FF8A4166699B40037DC40;
-			remoteInfo = DwollaOAuthLib;
-		};
 		96D64DE31B27B2D00051A663 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 96D64DC21B27B2D00051A663 /* Project object */;
@@ -57,9 +37,9 @@
 		6490E97B99D284E92673CE1B /* Pods-handsel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handsel.release.xcconfig"; path = "Pods/Target Support Files/Pods-handsel/Pods-handsel.release.xcconfig"; sourceTree = "<group>"; };
 		965A9CB41B2961CA0099BAD2 /* PayPalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalVC.swift; sourceTree = "<group>"; };
 		965A9CB61B2967010099BAD2 /* PayPalPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalPaymentVC.swift; sourceTree = "<group>"; };
+		965A9CB91B297CFD0099BAD2 /* BrainTreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainTreeVC.swift; sourceTree = "<group>"; };
 		96A70BF11B27FFD600783956 /* handsel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "handsel-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A70BF51B282F0800783956 /* handsel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = handsel.entitlements; sourceTree = "<group>"; };
-		96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DwollaOAuth.xcodeproj; sourceTree = "<group>"; };
 		96D64DCA1B27B2D00051A663 /* handsel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handsel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D64DCE1B27B2D00051A663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D64DCF1B27B2D00051A663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,20 +92,9 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		96A70CB81B28EDD900783956 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				96A70CBE1B28EDD900783956 /* DwollaOAuth.app */,
-				96A70CC01B28EDD900783956 /* Test.app */,
-				96A70CC21B28EDD900783956 /* libDwollaOAuthLib.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		96D64DC11B27B2D00051A663 = {
 			isa = PBXGroup;
 			children = (
-				96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */,
 				96D64DCC1B27B2D00051A663 /* handsel */,
 				96D64DE51B27B2D00051A663 /* handselTests */,
 				96D64DCB1B27B2D00051A663 /* Products */,
@@ -154,6 +123,7 @@
 				96D64DD61B27B2D00051A663 /* Main.storyboard */,
 				965A9CB41B2961CA0099BAD2 /* PayPalVC.swift */,
 				965A9CB61B2967010099BAD2 /* PayPalPaymentVC.swift */,
+				965A9CB91B297CFD0099BAD2 /* BrainTreeVC.swift */,
 				96D64DF21B27B4D50051A663 /* WebViewController.swift */,
 				96D64DD91B27B2D00051A663 /* Images.xcassets */,
 				96D64DDB1B27B2D00051A663 /* LaunchScreen.xib */,
@@ -263,12 +233,6 @@
 			mainGroup = 96D64DC11B27B2D00051A663;
 			productRefGroup = 96D64DCB1B27B2D00051A663 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 96A70CB81B28EDD900783956 /* Products */;
-					ProjectRef = 96A70CB71B28EDD900783956 /* DwollaOAuth.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				96D64DC91B27B2D00051A663 /* handsel */,
@@ -276,30 +240,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		96A70CBE1B28EDD900783956 /* DwollaOAuth.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = DwollaOAuth.app;
-			remoteRef = 96A70CBD1B28EDD900783956 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		96A70CC01B28EDD900783956 /* Test.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Test.app;
-			remoteRef = 96A70CBF1B28EDD900783956 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		96A70CC21B28EDD900783956 /* libDwollaOAuthLib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDwollaOAuthLib.a;
-			remoteRef = 96A70CC11B28EDD900783956 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		96D64DC81B27B2D00051A663 /* Resources */ = {
@@ -360,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D64DD51B27B2D00051A663 /* ViewController.swift in Sources */,
+				965A9CBA1B297CFD0099BAD2 /* BrainTreeVC.swift in Sources */,
 				96D64DD01B27B2D00051A663 /* AppDelegate.swift in Sources */,
 				965A9CB71B2967010099BAD2 /* PayPalPaymentVC.swift in Sources */,
 				96D64DF51B27CDCB0051A663 /* URLProtocol.swift in Sources */,

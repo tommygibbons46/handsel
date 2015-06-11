@@ -5,7 +5,8 @@
 #import <Venmo-iOS-SDK/Venmo.h>
 #import "Stripe.h"
 #import "ApplePayStubs.h"
-#import "PayPalMobile.h"
+//#import "PayPalMobile.h"
+#import <Braintree/Braintree.h>
 
 //#import "STPAPIClient+ApplePay.h"
 
