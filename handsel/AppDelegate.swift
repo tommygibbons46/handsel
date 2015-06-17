@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 //        return false changing for braintree
-        
+        return Braintree.handleOpenURL(url, sourceApplication: sourceApplication)
     }
 
     func applicationWillResignActive(application: UIApplication) {

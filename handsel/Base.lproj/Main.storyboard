@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2061" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2061" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hnr-DQ-L4N">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -220,6 +221,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yWC-bS-VAi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wtZ-Hd-hfd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxw-07-ykt">
@@ -277,6 +279,342 @@
             </objects>
             <point key="canvasLocation" x="1216.5" y="190"/>
         </scene>
+        <!--Phone Or Email-->
+        <scene sceneID="HFp-az-cfm">
+            <objects>
+                <viewController id="I1T-cc-cHv" customClass="PhoneOrEmail" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fiq-4T-gxT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Phm-C8-SPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aly-wr-u5q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l1-Oe-NNZ">
+                                <rect key="frame" x="117" y="173" width="103" height="30"/>
+                                <state key="normal" title="Phone Number">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="81" y="173" width="103" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="i0Z-Zd-hzm" kind="show" id="e9L-c9-kew"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTl-0C-UiI">
+                                <rect key="frame" x="186" y="77" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="162" y="77" width="76" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5I-Ba-qCT">
+                                <rect key="frame" x="275" y="173" width="38" height="30"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6pM-vw-3RG" kind="show" id="tQZ-4P-qDT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BTl-0C-UiI" firstAttribute="top" secondItem="Fiq-4T-gxT" secondAttribute="bottom" constant="57" id="AcC-8L-8fs"/>
+                            <constraint firstItem="8l1-Oe-NNZ" firstAttribute="top" secondItem="BTl-0C-UiI" secondAttribute="bottom" constant="75" id="O8t-zw-yUf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x5I-Ba-qCT" secondAttribute="trailing" constant="71" id="VJK-Bg-aa5"/>
+                            <constraint firstItem="x5I-Ba-qCT" firstAttribute="top" secondItem="BTl-0C-UiI" secondAttribute="bottom" constant="75" id="raN-nR-pkf"/>
+                            <constraint firstAttribute="centerX" secondItem="BTl-0C-UiI" secondAttribute="centerX" id="rlE-uT-l3F"/>
+                            <constraint firstItem="8l1-Oe-NNZ" firstAttribute="leading" secondItem="aly-wr-u5q" secondAttribute="leadingMargin" constant="101" id="wA4-NZ-MSY">
+                                <variation key="widthClass=compact" constant="65"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VJK-Bg-aa5"/>
+                                <exclude reference="raN-nR-pkf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="VJK-Bg-aa5"/>
+                                <include reference="raN-nR-pkf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="c5r-wK-g8h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4N-dF-55k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.5" y="870"/>
+        </scene>
+        <!--Input Phone Number-->
+        <scene sceneID="YaM-KQ-rel">
+            <objects>
+                <viewController id="i0Z-Zd-hzm" customClass="InputPhoneNumber" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="la4-ny-Jj4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Khz-Pp-xzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8Q-Ij-Vy3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-TQ-k4A">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Access through your contacts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showContacts:" destination="i0Z-Zd-hzm" eventType="touchUpInside" id="SkD-HI-VRQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-8r-igX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Input Phone Number">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterPhoneNumber:" destination="i0Z-Zd-hzm" eventType="touchUpInside" id="46o-C0-pLk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yPc-TQ-k4A" firstAttribute="top" secondItem="la4-ny-Jj4" secondAttribute="bottom" constant="74" id="Dgo-WG-RGn"/>
+                            <constraint firstAttribute="centerX" secondItem="yPc-TQ-k4A" secondAttribute="centerX" id="Dhw-Sy-eID"/>
+                            <constraint firstAttribute="centerX" secondItem="eJw-8r-igX" secondAttribute="centerX" id="f8J-Sj-t22"/>
+                            <constraint firstItem="eJw-8r-igX" firstAttribute="top" secondItem="yPc-TQ-k4A" secondAttribute="bottom" constant="39" id="u1I-P9-jFa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yPc-TQ-k4A"/>
+                                <exclude reference="eJw-8r-igX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Dgo-WG-RGn"/>
+                                <exclude reference="Dhw-Sy-eID"/>
+                                <exclude reference="f8J-Sj-t22"/>
+                                <exclude reference="u1I-P9-jFa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yPc-TQ-k4A"/>
+                                <include reference="eJw-8r-igX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Dgo-WG-RGn"/>
+                                <include reference="Dhw-Sy-eID"/>
+                                <include reference="f8J-Sj-t22"/>
+                                <include reference="u1I-P9-jFa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeS-JC-lEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767.5" y="870"/>
+        </scene>
+        <!--Input Email-->
+        <scene sceneID="Tug-oE-IGX">
+            <objects>
+                <viewController id="6pM-vw-3RG" customClass="InputEmail" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T1D-L3-Fvx"/>
+                        <viewControllerLayoutGuide type="bottom" id="1fQ-58-FIt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xub-vf-ZQJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gb-8o-ey7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Input Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inputEmailAddress:" destination="6pM-vw-3RG" eventType="touchUpInside" id="RwP-kx-Rj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8B-ZR-kBy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Access Email From Contacts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showContacts:" destination="6pM-vw-3RG" eventType="touchUpInside" id="V88-5W-EPU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1gb-8o-ey7" secondAttribute="centerX" id="FlF-Lx-Ykt"/>
+                            <constraint firstItem="1gb-8o-ey7" firstAttribute="top" secondItem="B8B-ZR-kBy" secondAttribute="bottom" constant="28" id="J6o-EI-wfu"/>
+                            <constraint firstAttribute="centerX" secondItem="B8B-ZR-kBy" secondAttribute="centerX" id="SVE-ZD-0bq"/>
+                            <constraint firstItem="B8B-ZR-kBy" firstAttribute="top" secondItem="T1D-L3-Fvx" secondAttribute="bottom" constant="50" id="Sem-BY-hey"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1gb-8o-ey7"/>
+                                <exclude reference="B8B-ZR-kBy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SVE-ZD-0bq"/>
+                                <exclude reference="Sem-BY-hey"/>
+                                <exclude reference="FlF-Lx-Ykt"/>
+                                <exclude reference="J6o-EI-wfu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1gb-8o-ey7"/>
+                                <include reference="B8B-ZR-kBy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SVE-ZD-0bq"/>
+                                <include reference="Sem-BY-hey"/>
+                                <include reference="FlF-Lx-Ykt"/>
+                                <include reference="J6o-EI-wfu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZY-rA-MHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087.5" y="1599"/>
+        </scene>
+        <!--Agreement View Controller-->
+        <scene sceneID="zSf-Jd-pKX">
+            <objects>
+                <viewController id="Um5-p7-jqN" customClass="AgreementViewController" customModule="handsel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHL-MH-9Hk"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZT6-cl-JNn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ct-MU-OIR" userLabel="View" customClass="A">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsB-nm-y53">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello There" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Bz-C6s">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="79" y="132" width="88" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="gC5-Bz-C6s" secondAttribute="centerY" id="DpX-XS-lkr"/>
+                                    <constraint firstAttribute="centerX" secondItem="gC5-Bz-C6s" secondAttribute="centerX" id="nLm-HR-o7d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="gC5-Bz-C6s"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="DpX-XS-lkr"/>
+                                        <exclude reference="nLm-HR-o7d"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="200" y="300" width="0.0" height="0.0"/>
+                                    <mask key="subviews">
+                                        <include reference="gC5-Bz-C6s"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="DpX-XS-lkr"/>
+                                        <include reference="nLm-HR-o7d"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-Rb-gfs">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8V0-Kw-0WF"/>
+                                    <constraint firstAttribute="width" constant="130" id="UXQ-h1-FRG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8V0-Kw-0WF"/>
+                                        <exclude reference="UXQ-h1-FRG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8V0-Kw-0WF"/>
+                                        <include reference="UXQ-h1-FRG"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-NZ-zFH">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.44083359420000001" blue="0.39133891160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="295" y="107" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a release time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-yv-wMN">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="54" y="112" width="144" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ui9-Rb-gfs" firstAttribute="top" secondItem="kHL-MH-9Hk" secondAttribute="bottom" constant="39" id="OVh-dU-5BZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ui9-Rb-gfs" secondAttribute="trailing" constant="46" id="XmH-5q-ACh"/>
+                            <constraint firstAttribute="centerY" secondItem="gsB-nm-y53" secondAttribute="centerY" id="YEo-93-TR0"/>
+                            <constraint firstAttribute="centerX" secondItem="gsB-nm-y53" secondAttribute="centerX" id="puI-n5-595"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gsB-nm-y53"/>
+                                <exclude reference="Ui9-Rb-gfs"/>
+                                <exclude reference="B3A-NZ-zFH"/>
+                                <exclude reference="VUH-yv-wMN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="YEo-93-TR0"/>
+                                <exclude reference="puI-n5-595"/>
+                                <exclude reference="OVh-dU-5BZ"/>
+                                <exclude reference="XmH-5q-ACh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gsB-nm-y53"/>
+                                <include reference="Ui9-Rb-gfs"/>
+                                <include reference="B3A-NZ-zFH"/>
+                                <include reference="VUH-yv-wMN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="YEo-93-TR0"/>
+                                <include reference="puI-n5-595"/>
+                                <include reference="OVh-dU-5BZ"/>
+                                <include reference="XmH-5q-ACh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jj-3O-qnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3492" y="870"/>
+        </scene>
         <!--Pay Pal PaymentVC-->
         <scene sceneID="cui-sD-j2a">
             <objects>
@@ -293,7 +631,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kh6-ej-gQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256.5" y="845"/>
+            <point key="canvasLocation" x="-379.5" y="771"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8cG-SJ-R4M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hnr-DQ-L4N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWe-xr-Sjm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I1T-cc-cHv" kind="relationship" relationship="rootViewController" id="3ME-43-RBn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2h-IU-KkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087.5" y="870"/>
         </scene>
     </scenes>
 </document>
